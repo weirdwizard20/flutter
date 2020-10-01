@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+void main() => runApp(MyApp3d());
+class MyApp3d extends Statelesswidget{
+  @override
+Widget build(BuildContext context) {
+return MaterialApp(
+   home: Scaffold(
+     body: ListWheelScrollView(
+       magnificient: 2,
+       useMagnifier: true,
+       itemExtent: 50,
+       children: List.generated(1000,(i) => i)
+       .map((e) => Text(e.toString()))
+       .toList(),
+     )),
+);
+}
+}
+
